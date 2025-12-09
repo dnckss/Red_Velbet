@@ -5,9 +5,9 @@
 
 export const COLORS = {
   // Primary Colors - Redvelvet 브랜드 빨간색
-  PRIMARY: '#DC2626', // 진한 빨강 (Redvelvet 메인 컬러)
-  PRIMARY_DARK: '#B91C1C', // 더 진한 빨강
-  PRIMARY_LIGHT: '#EF4444', // 밝은 빨강
+  PRIMARY: '#D60F0F', // Redvelvet 메인 컬러
+  PRIMARY_DARK: '#B00D0D', // 더 진한 빨강
+  PRIMARY_LIGHT: '#E63939', // 밝은 빨강
   PRIMARY_SUBTLE: '#FEE2E2', // 연한 빨강 배경
   
   // Text Colors - 명확한 계층 구조
@@ -41,7 +41,7 @@ export const COLORS = {
   GAME_TYPE_SUM: '#3B82F6',
   
   // Status Colors - 직관적인 상태 표시
-  STATUS_ACTIVE: '#DC2626',
+  STATUS_ACTIVE: '#D60F0F',
   STATUS_SUCCESS: '#10B981',
   STATUS_WARNING: '#F59E0B',
   STATUS_ERROR: '#EF4444',

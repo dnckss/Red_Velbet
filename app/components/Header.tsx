@@ -4,10 +4,12 @@ import { useState } from 'react';
 import { COLORS } from '../constants/colors';
 import { DESIGN } from '../constants/design';
 import { NAVIGATION_MENU, MenuItem } from '../constants/menu';
+import LoginModal from './LoginModal';
 
 export default function Header() {
   const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   return (
     <header 
@@ -27,8 +29,8 @@ export default function Header() {
       >
         <div className="max-w-[1200px] mx-auto px-6 flex justify-end">
           <nav className="flex items-center gap-6 h-9">
-            <a 
-              href="#" 
+            <button
+              onClick={() => setIsLoginModalOpen(true)}
               className="text-sm font-medium transition-colors hover:opacity-80"
               style={{ 
                 color: COLORS.TEXT_SECONDARY,
@@ -36,9 +38,9 @@ export default function Header() {
               }}
             >
               로그인
-            </a>
+            </button>
             <a 
-              href="#" 
+              href="/signup" 
               className="text-sm font-medium transition-colors hover:opacity-80"
               style={{ 
                 color: COLORS.TEXT_SECONDARY,
@@ -182,6 +184,12 @@ export default function Header() {
           </div>
         </div>
       </div>
+
+      {/* Login Modal */}
+      <LoginModal 
+        isOpen={isLoginModalOpen} 
+        onClose={() => setIsLoginModalOpen(false)} 
+      />
     </header>
   );
 }
